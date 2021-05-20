@@ -4,14 +4,32 @@
       <div class="w-100 d-flex align-items-center flex-row">
         <div class="header__logo" @click="goHome()">
           <div class="header__logo-leftBlock"></div>
-          <img src="../assets/images/logo.png" alt="瑪家鄉預約訂車平台" width="350px" />
+          <img
+            src="../assets/images/logo.png"
+            alt="瑪家鄉預約訂車平台"
+            width="350px"
+          />
         </div>
-        <div class="w-100 d-flex align-items-center justify-content-around" style="max-width: 1000px">
-          <div class="header__menu d-flex align-items-center justify-content-center" :class="{
+        <div
+          class="w-100 d-flex align-items-center justify-content-around"
+          style="max-width: 1000px"
+        >
+          <div
+            class="header__menu d-flex align-items-center justify-content-center"
+            :class="{
               'header__menu--active': item.path.name === $route.meta.name,
-            }" v-for="(item, index) in titleMenu" :key="'TM__' + index">
-            <router-link class="w-100 header__menu--action text-decoration-none d-flex align-items-center justify-content-center flex-column" :to="{ name: item.path.url }" v-if="!item.subMenu">
-              <div class="w-100 d-flex align-items-center justify-content-center">
+            }"
+            v-for="(item, index) in titleMenu"
+            :key="'TM__' + index"
+          >
+            <router-link
+              class="w-100 header__menu--action text-decoration-none d-flex align-items-center justify-content-center flex-column"
+              :to="{ name: item.path.url }"
+              v-if="!item.subMenu"
+            >
+              <div
+                class="w-100 d-flex align-items-center justify-content-center"
+              >
                 <img :src="item.imgURL" alt="" />
                 <img class="" :src="item.imgURL_hover" alt="" />
               </div>
@@ -19,17 +37,30 @@
               <p class="m-0">{{ item.menuText }}</p>
             </router-link>
 
-            <span class="header__menu--action w-100 d-flex align-items-center justify-content-center flex-column pos-relative" v-else>
-              <div class="w-100 d-flex align-items-center justify-content-center">
+            <span
+              class="header__menu--action w-100 d-flex align-items-center justify-content-center flex-column pos-relative"
+              v-else
+            >
+              <div
+                class="w-100 d-flex align-items-center justify-content-center"
+              >
                 <img :src="item.imgURL" alt="" />
                 <img class="" :src="item.imgURL_hover" alt="" />
               </div>
               <p class="m-0">{{ item.menuText }}</p>
               <div class="pos-absolute header__submenu text-center">
-                <div class="header__submenu--block py-8" :class="{
+                <div
+                  class="header__submenu--block py-8"
+                  :class="{
                     'header__submenu--active': items.path.url === $route.name,
-                  }" v-for="(items, $index) in item.subMenu" :key="'SM_' + $index">
-                  <router-link class="w-100 text-decoration-none px-16" :to="{ name: items.path.url }">
+                  }"
+                  v-for="(items, $index) in item.subMenu"
+                  :key="'SM_' + $index"
+                >
+                  <router-link
+                    class="w-100 text-decoration-none px-16"
+                    :to="{ name: items.path.url }"
+                  >
                     {{ items.menuText }}
                   </router-link>
                 </div>
@@ -40,7 +71,7 @@
 
         <div class="sign ml-auto mr-90 d-flex" v-if="$store.state.userToken">
           <div class="sign__user text-center d-flex align-items-center mr-10">
-            <strong>HI! {{$store.state.userName}}</strong>
+            <strong>HI! {{ $store.state.userName }}</strong>
           </div>
           <button class="sign__out py-10" @click="signout">登出</button>
         </div>

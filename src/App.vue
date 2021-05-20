@@ -39,12 +39,24 @@
         </div>
 
         <div class="d-block d-mb-none">
-          <div class="footerInfo w-100 d-flex align-items-center justify-content-around">
-            <div class="footerInfo-list w-100 py-10 d-flex align-items-center justify-content-center flex-column" :class="{
+          <div
+            class="footerInfo w-100 d-flex align-items-center justify-content-around"
+          >
+            <div
+              class="footerInfo-list w-100 py-10 d-flex align-items-center justify-content-center flex-column"
+              :class="{
                 'footerInfo-list_active': item.path.name == $route.meta.name,
-              }" v-for="(item, index) in titleMenu" :key="'FL_' + index">
-              <router-link class="text-decoration-none" :to="{ name: item.path.url }">
-                <div class="w-100 d-flex align-items-center justify-content-center">
+              }"
+              v-for="(item, index) in titleMenu"
+              :key="'FL_' + index"
+            >
+              <router-link
+                class="text-decoration-none"
+                :to="{ name: item.path.url }"
+              >
+                <div
+                  class="w-100 d-flex align-items-center justify-content-center"
+                >
                   <img :src="item.imgURL" alt="" width="30px" />
                   <img :src="item.imgURL_hover" alt="" width="30px" />
                 </div>
@@ -129,6 +141,27 @@ export default {
           imgURL: require("@/assets/images/header/contact.png"),
           imgURL_hover: require("@/assets/images/header/contact_hover.png"),
           menuText: "關於我們",
+        },
+        //聯繫客服
+        {
+          path: {
+            name: "contactService",
+            url: "contactService",
+          },
+          imgURL: require("@/assets/images/header/contact.png"),
+          imgURL_hover: require("@/assets/images/header/contact_hover.png"),
+          menuText: "聯繫客服",
+        },
+
+        //常見問題
+        {
+          path: {
+            name: "question",
+            url: "question",
+          },
+          imgURL: require("@/assets/images/header/contact.png"),
+          imgURL_hover: require("@/assets/images/header/contact_hover.png"),
+          menuText: "常見問題",
         },
       ],
     };
