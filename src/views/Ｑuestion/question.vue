@@ -1,21 +1,92 @@
 <template>
-  <div>
-    <h2>用戶常見問題</h2>
-    <div class="line">
-      <div class="line_d"></div>
-      <div class="line_text">使用說明相關問題</div>
-    </div>
+  <div id="question">
+    <div class="question">
+      <div class="question__header">
+        <h1 class="question__header__title">用戶常見問題</h1>
+      </div>
+      <!-- 分隔線 -->
+      <div class="line">
+        <div class="line__d"></div>
+        <div class="line__text">使用說明相關問題</div>
+      </div>
 
-    <div class="qa_a"></div>
+      <!-- 問題答覆 -->
+      <div class="question__list">
+        <div class="question__list__quest" @click="isRotate = !isRotate">
+          <i class="el-icon-plus mr-8" :class="{ rotate: isRotate }"></i
+          >在交通平台系統最早可以預約訂車期間為何?
+          <p></p>
+        </div>
+        <div class="question__list__ans " v-if="isRotate">
+          最早預約訂車期間為30天，最晚於72小時前至系統完成預約下單。
+        </div>
+      </div>
+    </div>
   </div>
 </template>
-
 <script>
 export default {
   data() {
-    return {};
+    return {
+      isRotate: false,
+    };
   },
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+#question {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .question {
+    width: 80%;
+    &__header {
+      &__title {
+        font-family: Microsoft JhengHei;
+        color: #888;
+      }
+    }
+
+    // 分隔線
+    .line {
+      &__d {
+        width: 100%;
+        height: 1px;
+        background-color: #888;
+        position: absolute;
+        top: 100px;
+        left: 0;
+      }
+      &__text {
+        text-align: center;
+        width: 180px;
+        padding: 0 20px;
+        font-size: 22px;
+        background-color: #ffffff;
+        color: #888;
+        z-index: 999;
+      }
+    }
+
+    .question__list {
+      margin-top: 50px;
+      &__quest {
+        color: #c6604c;
+        font-size: 20px;
+        cursor: pointer;
+        .el-icon-plus {
+          transition-duration: 0.2s;
+          &.rotate {
+            transform: rotate(45deg);
+          }
+        }
+      }
+      &__ans {
+        font-size: 16px;
+        color: #888;
+      }
+    }
+  }
+}
+</style>
