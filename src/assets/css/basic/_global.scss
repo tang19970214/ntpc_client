@@ -1,0 +1,232 @@
+.el-main {
+  padding: 0px 150px 48px 150px;
+}
+
+.cur-pointer {
+  cursor: pointer;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.mb-auto {
+  margin-bottom: auto !important;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+@media (min-width: 1600px) {
+  .flex-md-column {
+    flex-direction: column !important;
+  }
+
+  .d-xl-block {
+    display: block;
+  }
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.justify-content-start {
+  justify-content: flex-start !important;
+}
+
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.justify-content-around {
+  justify-content: space-around !important;
+}
+
+.align-items-start {
+  align-items: flex-start !important;
+}
+
+.align-items-end {
+  align-items: flex-end !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.align-self-start {
+  align-self: flex-start !important;
+}
+
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.list-none {
+  list-style: none;
+}
+
+.t-0 {
+  top: 0;
+}
+
+.b-0 {
+  bottom: 0;
+}
+
+.l-0 {
+  left: 0;
+}
+
+.r-0 {
+  right: 0;
+}
+
+.z-999 {
+  z-index: 999;
+}
+
+.pos-fixed {
+  position: fixed;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.pos-absolute {
+  position: absolute;
+}
+
+.overflow-x {
+  overflow-x: auto;
+}
+
+.overflow-y {
+  overflow-y: auto;
+}
+
+.text-mainColor {
+  color: #F38C00;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.modal {
+  position: fixed;
+  z-index: 4;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  .closeModalBtn {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    font-weight: bolder;
+    font-size: 32px;
+  }
+
+  &__content {
+    width: 100%;
+    margin-top: 10rem;
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.el-button {
+  &--primary {
+    background-color: #F38C00 !important;
+    border-color: #F38C00 !important;
+
+    &:hover {
+      background-color: #FFEEDD !important;
+      color: #F38C00 !important;
+    }
+  }
+}
+
+.el-select {
+  .is-focus {
+    .el-input__inner {
+      border-color: #F38C00 !important;
+    }
+  }
+}
+
+.el-scrollbar {
+  .selected {
+    color: #F38C00 !important;
+  }
+}
