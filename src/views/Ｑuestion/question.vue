@@ -5,10 +5,7 @@
         <h1 class="question__header__title">用戶常見問題</h1>
       </div>
       <!-- 分隔線 -->
-      <div class="line">
-        <!-- <div class="line__d"></div> -->
-        <!-- <div class="line__text">使用說明相關問題</div> -->
-      </div>
+      <div class="line"></div>
 
       <!-- 問題答覆 -->
       <div class="question__list">
