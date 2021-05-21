@@ -39,9 +39,7 @@
         </div>
 
         <div class="d-block d-mb-none">
-          <div
-            class="footerInfo w-100 d-flex align-items-center justify-content-around"
-          >
+          <div class="footerInfo w-100 d-flex ql-align-center">
             <div
               class="footerInfo-list w-100 py-10 d-flex align-items-center justify-content-center flex-column"
               :class="{
@@ -215,7 +213,11 @@ export default {
     bottom: 0;
     background: white;
     border-top: 1px solid #eeeeee;
+    overflow: auto;
     &-list {
+      & :last-child {
+        margin: 0 8px;
+      }
       img:last-child {
         display: none;
       }
@@ -223,6 +225,7 @@ export default {
         font-weight: 600;
         font-size: 10px;
         line-height: 12px;
+        white-space: nowrap;
         color: rgba(0, 0, 0, 0.45);
       }
       &_active {
