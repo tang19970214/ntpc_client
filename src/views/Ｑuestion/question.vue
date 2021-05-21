@@ -6,8 +6,8 @@
       </div>
       <!-- 分隔線 -->
       <div class="line">
-        <div class="line__d"></div>
-        <div class="line__text">使用說明相關問題</div>
+        <!-- <div class="line__d"></div> -->
+        <!-- <div class="line__text">使用說明相關問題</div> -->
       </div>
 
       <!-- 問題答覆 -->
@@ -53,27 +53,27 @@ export default {
 
     // 分隔線
     .line {
-      &__d {
-        width: 100%;
-        height: 1px;
-        background-color: #888;
+      position: absolute;
+      height: 1px;
+      background-color: #888;
+      right: 0;
+      top: 100px;
+      left: 0;
+      &::after {
+        left: 8%;
+        top: -16px;
         position: absolute;
-        top: 100px;
-        left: 0;
-      }
-      &__text {
-        text-align: center;
-        width: 180px;
+        content: "使用說明相關問題";
+        background-color: #ffffff;
         padding: 0 20px;
         font-size: 22px;
-        background-color: #ffffff;
         color: #888;
         z-index: 999;
       }
     }
 
     .question__list {
-      margin-top: 50px;
+      margin-top: 100px;
       &__quest {
         color: #c6604c;
         font-size: 20px;
